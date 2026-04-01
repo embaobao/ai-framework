@@ -648,7 +648,5 @@ MIT License
 
 ## 联系方式
 
-- 项目主页: [https://github.com/embaobao/ai-framework](https://github.com/your-org/ai-framework)
-- 问题反馈: [https://github.com/](https://github.com/your-org/ai-framework/issues)[embaobao](https://github.com/your-org/ai-framework)[/ai-framework/issues](https://github.com/your-org/ai-framework/issues)
-- 邮箱: chxdbb\@gmail.com
+- 邮箱: <chxdbb@gmail.com>
 

@@ -1,0 +1,56 @@
+{
+  "extends": "./tsconfig.json", // 继承基础 tsconfig.json 配置
+  "compilerOptions": {
+    /* 构建优化选项 */
+    "declaration": true, // 生成类型声明文件
+    "declarationMap": false, // 构建时不生成声明文件的 sourcemap
+    "sourceMap": true, // 生成 sourcemap 用于调试
+    "removeComments": true, // 构建时移除注释以减小文件体积
+    "noEmit": false, // 允许生成输出文件
+    "emitDeclarationOnly": false, // 不仅生成声明文件，也生成 JS 文件
+
+    /* 输出配置 */
+    "outDir": "./dist", // 输出目录
+    "rootDir": "./src", // 源代码根目录
+
+    /* 模块输出配置 */
+    "module": "ESNext", // 输出 ESNext 模块格式
+    "target": "ES2020", // 目标 ES 版本
+
+    /* 构建性能优化 */
+    "incremental": true, // 启用增量编译
+    "tsBuildInfoFile": "./dist/.tsbuildinfo", // 构建信息文件位置
+
+    /* 类型检查优化 */
+    "skipLibCheck": true, // 跳过库文件类型检查以加快构建速度
+    "skipDefaultLibCheck": true // 跳过默认库文件检查
+  },
+
+  /* 构建包含的文件 */
+  "include": [
+    "src/**/*", // 包含所有源文件
+    "src/**/*.ts", // 包含所有 TypeScript 文件
+    "src/**/*.tsx" // 包含所有 TSX 文件
+  ],
+
+  /* 构建排除的文件 */
+  "exclude": [
+    "node_modules", // 排除依赖
+    "dist", // 排除输出目录
+    "**/*.spec.ts", // 排除测试文件
+    "**/*.test.ts", // 排除测试文件
+    "**/*.mock.ts", // 排除 mock 文件
+    "**/*.d.ts", // 排除声明文件
+    "**/tests/**", // 排除测试目录
+    "**/__tests__/**", // 排除测试目录
+    "**/*.stories.ts", // 排除 Storybook 文件
+    "**/*.stories.tsx" // 排除 Storybook 文件
+  ],
+
+  /* 引用配置 */
+  "references": [], // 如果有子项目，可以在这里引用
+
+  /* 编译器选项 */
+  "compileOnSave": false, // 保存时不自动编译
+  "buildOnSave": false // 保存时不自动构建
+}

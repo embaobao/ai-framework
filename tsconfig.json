@@ -1,0 +1,90 @@
+{
+  "compilerOptions": {
+    /* 基本选项 */
+    "target": "ES2020", // 指定 ECMAScript 目标版本
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // 指定要包含在编译中的库文件
+    "module": "ESNext", // 指定生成哪个模块系统代码
+    "moduleResolution": "node", // 决定如何处理模块导入
+    "resolveJsonModule": true, // 允许导入 .json 扩展名的模块
+    "allowJs": true, // 允许编译 JavaScript 文件
+    "checkJs": false, // 报告 .js 文件中的错误
+    "declaration": true, // 生成相应的 .d.ts 文件
+    "declarationMap": true, // 为每个 .d.ts 文件生成 sourcemap
+    "sourceMap": true, // 生成相应的 .map 文件
+    "outDir": "./dist", // 重定向输出目录
+    "rootDir": "./src", // 指定输入文件的根目录
+
+    /* 严格类型检查选项 */
+    "strict": true, // 启用所有严格类型检查选项
+    "noImplicitAny": true, // 在表达式和声明上有隐含的 any 类型时报错
+    "strictNullChecks": true, // 启用严格的 null 检查
+    "strictFunctionTypes": true, // 启用函数类型的严格检查
+    "strictBindCallApply": true, // 启用对 bind、call 和 apply 的严格检查
+    "strictPropertyInitialization": true, // 确保类的属性被初始化
+    "noImplicitThis": true, // 当 this 表达式值为 any 类型时报错
+    "alwaysStrict": true, // 以严格模式解析并为每个源文件发出 "use strict"
+
+    /* 额外检查 */
+    "noUnusedLocals": true, // 有未使用的局部变量时报错
+    "noUnusedParameters": true, // 有未使用的参数时报错
+    "noImplicitReturns": true, // 并不是所有函数中的代码路径都返回值时报错
+    "noFallthroughCasesInSwitch": true, // 在 switch 语句中报告 fallthrough 错误
+    "noUncheckedIndexedAccess": true, // 索引访问会包含 undefined
+    "noImplicitOverride": true, // 要求派生类中的 override 标注
+
+    /* 模块解析选项 */
+    "esModuleInterop": true, // 启用 emit 仅用于类型导入的 import
+    "skipLibCheck": true, // 跳过声明文件的类型检查
+    "forceConsistentCasingInFileNames": true, // 禁止对同一文件使用大小写不一致的引用
+
+    /* 高级选项 */
+    "incremental": true, // 启用增量编译
+    "tsBuildInfoFile": "./dist/.tsbuildinfo", // 指定 .tsbuildinfo 文件的位置
+    "removeComments": false, // 不要删除注释
+    "preserveConstEnums": true, // 保留 const enum 声明
+    "pretty": true, // 启用美观的错误和颜色输出
+
+    /* 路径映射 */
+    "baseUrl": ".", // 用于解析非相对模块名称的基目录
+    "paths": {
+      "@/*": ["src/*"], // 路径别名：@/ 映射到 src/
+      "@core/*": ["src/core/*"], // 核心模块别名
+      "@utils/*": ["src/utils/*"], // 工具函数别名
+      "@types/*": ["src/types/*"] // 类型定义别名
+    },
+
+    /* 实验性选项 */
+    "experimentalDecorators": true, // 启用对 ES 装饰器的实验性支持
+    "emitDecoratorMetadata": true // 为装饰器发出设计类型元数据
+  },
+
+  /* 编译包含的文件 */
+  "include": [
+    "src/**/*", // 包含 src 目录下的所有文件
+    "src/**/*.ts", // 包含所有 TypeScript 文件
+    "src/**/*.tsx" // 包含所有 TSX 文件
+  ],
+
+  /* 编译排除的文件 */
+  "exclude": [
+    "node_modules", // 排除 node_modules
+    "dist", // 排除输出目录
+    "**/*.spec.ts", // 排除测试文件
+    "**/*.test.ts", // 排除测试文件
+    "**/*.d.ts" // 排除声明文件
+  ],
+
+  /* 引用的项目 */
+  "references": [], // 引用其他 TypeScript 项目
+
+  /* 监视选项 */
+  "watchOptions": {
+    "watchFile": "useFsEvents", // 使用文件系统事件监视文件
+    "watchDirectory": "useFsEvents", // 使用文件系统事件监视目录
+    "synchronousWatchDirectory": true, // 同步监视目录
+    "excludeDirectories": [
+      "node_modules", // 排除 node_modules
+      "dist" // 排除输出目录
+    ]
+  }
+}
